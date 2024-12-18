@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ccc;
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 5rem;
+
+}
+
+p {
+    margin-top: 10px;
+}
+
+button {
+    padding: 5px;
+    width: 150px;
+    font-size: 1rem;
+    background-color: salmon;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+input {
+    height: 30px;
+    padding: 0 10px;
+}
+
+#result {
+    font-size: 1.5rem;
+    color: red;
+}
