@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: #000;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn {
+    margin-top: 20px;
+    height: 2rem;
+    /* width: 2.5rem; */
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+
+    button {
+        padding: 5px;
+        font-size: 1rem;
+        border: none;
+        width: 50px;
+        height: 40px;
+        border-radius: 5px;
+    }
+}
+
+#start {
+    background-color: seagreen;
+    color: white;
+}
+
+#stop {
+    background-color: crimson;
+    color: white;
+}
