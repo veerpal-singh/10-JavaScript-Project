@@ -11,51 +11,55 @@ const submitBtn = document.querySelector(".submit_btn");
 const startGameBtn = document.querySelector(".start_game");
 
 
-const alGuessesArray = []
+(() => {
+    const alGuessesArray = []
 
-let randomNumber = Math.round(Math.random() * 100);
+    let randomNumber = Math.round(Math.random() * 100);
 
-form.addEventListener("submit", (e) => {
+    form.addEventListener("submit", (e) => {
 
-    e.preventDefault()
+        e.preventDefault()
 
-    const userInputValue = parseInt(userInput.value);
+        const userInputValue = parseInt(userInput.value);
 
-    if (userInputValue < randomNumber) {
+        if (userInputValue < randomNumber) {
 
-        result.innerText = "Too low!"
+            result.innerText = "Too low!"
 
-    } else if (userInputValue > randomNumber) {
+        } else if (userInputValue > randomNumber) {
 
-        result.innerText = "Too high!"
+            result.innerText = "Too high!"
 
-    } else {
+        } else {
 
-        result.innerText = "You got it ! Congrats"
+            result.innerText = "You got it ! Congrats"
 
-        startGameBtn.disabled = false
+            startGameBtn.disabled = false
 
-        submitBtn.disabled = true
-    }
+            submitBtn.disabled = true
+        }
 
-    alGuessesArray.push(userInputValue)
+        alGuessesArray.push(userInputValue)
 
-    allGuesses.innerText = "Your guesses : " + alGuessesArray.join(",")
+        // join Method => Array to String
 
-    form.reset()
+        allGuesses.innerText = "Your guesses : " + alGuessesArray.join(",")
 
-})
+        form.reset()
+
+    })
 
 
-startGameBtn.addEventListener("click", (e) => {
+    startGameBtn.addEventListener("click", (e) => {
 
-    allGuesses.innerText = ""
+        allGuesses.innerText = ""
 
-    result.innerText = ""
+        result.innerText = ""
 
-    startGameBtn.disabled = true
+        startGameBtn.disabled = true
 
-    submitBtn.disabled = false
+        submitBtn.disabled = false
 
-    randomNumber = Math.round(Math.random() * 100);
-})
+        randomNumber = Math.round(Math.random() * 100);
+    })
+})()
